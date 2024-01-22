@@ -77,3 +77,7 @@ C:\Users\ugrst\source\repos\CvWebProject\CvProject\CvProject\obj\Debug\CvProject
 C:\Users\ugrst\source\repos\CvWebProject\CvProject\CvProject\obj\Debug\CvProject.csproj.CopyComplete
 C:\Users\ugrst\source\repos\CvWebProject\CvProject\CvProject\obj\Debug\CvProject.dll
 C:\Users\ugrst\source\repos\CvWebProject\CvProject\CvProject\obj\Debug\CvProject.pdb
+C:\Users\ugrst\source\repos\CvWebProject\CvProject\CvProject\bin\EntityFramework.dll
+C:\Users\ugrst\source\repos\CvWebProject\CvProject\CvProject\bin\EntityFramework.SqlServer.dll
+C:\Users\ugrst\source\repos\CvWebProject\CvProject\CvProject\bin\EntityFramework.xml
+C:\Users\ugrst\source\repos\CvWebProject\CvProject\CvProject\bin\EntityFramework.SqlServer.xml
