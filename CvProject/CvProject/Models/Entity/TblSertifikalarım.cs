@@ -16,5 +16,6 @@ namespace CvProject.Models.Entity
     {
         public int ID { get; set; }
         public string Aciklama { get; set; }
+        public string Link { get; set; }    
     }
 }

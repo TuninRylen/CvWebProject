@@ -1,0 +1,11 @@
+﻿
+@using CvProject.Models.Entity
+@model List<TblSertifikalarım>
+
+@foreach (var x in Model)
+{
+    <li>
+        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+        <a href="@x.Link" target="_blank">@x.Aciklama</a>
+    </li>
+}

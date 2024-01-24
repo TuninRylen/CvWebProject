@@ -44,7 +44,13 @@ namespace CvProject.Controllers
             return PartialView(hobilerim);
         }
 
+        public PartialViewResult Sertifikalarim()
+        {
+            var sertifikalarim = db.TblSertifikalarım.ToList();
+            return PartialView(sertifikalarim);
+        }
 
-       
+
+
     }
 }
