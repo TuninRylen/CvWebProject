@@ -50,7 +50,19 @@ namespace CvProject.Controllers
             return PartialView(sertifikalarim);
         }
 
+        [HttpGet]
+        public PartialViewResult iletisim()
+        {
+            return PartialView();
+        }
 
-
+        [HttpPost]
+        public PartialViewResult iletisim(Tbliletisim T)
+        {
+            T.Tarih = DateTime.Now;
+            db.Tbliletisim.Add(T);
+            db.SaveChanges();
+            return PartialView();
+        }
     }
 }
