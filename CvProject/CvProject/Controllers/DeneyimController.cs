@@ -1,4 +1,5 @@
-﻿using CvProject.Repositories;
+﻿using CvProject.Models.Entity;
+using CvProject.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,19 @@ namespace CvProject.Controllers
         {
             var degerler = repo.List();
             return View(degerler);
+        }
+
+        [HttpGet]
+        public ActionResult DeneyimEkle() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult DeneyimEkle(TblDeneyimlerim p)
+        {
+            repo.Add(p);
+            return RedirectToAction("Index");
         }
     }
 }
