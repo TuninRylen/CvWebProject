@@ -4,6 +4,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@{string renk = "";}
 
 <br />
 
@@ -26,6 +27,8 @@
                                         <th>Task</th>
                                         <th>Progress</th>
                                         <th style="width: 40px">Label</th>
+                                        <th>Sil</th>
+                                        <th>Güncelle</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,11 +39,31 @@
                                             <td>@x.ID</td>
                                             <td>@x.Yetenek</td>
                                             <td>
+
+                                                @if (x.Oran > 40 && 0 > x.Oran)
+                                                {
+                                                    renk = "progress-bar progress-bar-danger";
+                                                }
+                                                else if (x.Oran >= 40 && 60 > x.Oran)
+                                                {
+                                                    renk = "progress-bar bg-warning";
+                                                }
+                                                else if (x.Oran >= 60 && 70 > x.Oran)
+                                                {
+                                                    renk = "progress-bar bg-primary";
+                                                }
+                                                else
+                                                {
+                                                    renk = "progress-bar bg-success";
+                                                }
+
                                                 <div class="progress progress-xs">
-                                                    <div class="progress-bar progress-bar-danger" style="width: @x.Oran%"></div>
+                                                    <div class="@renk" style="width: @x.Oran%"></div>
                                                 </div>
                                             </td>
-                                            <td><span class="badge bg-danger">@x.Oran%</span></td>
+                                            <td><span class="badge @renk">@x.Oran%</span></td>
+                                            <td><a href="#" class="btn btn-warning">Sil</a></td>
+                                            <td><a href="#" class="btn btn-success">Güncelle</a></td>
                                         </tr>
                                     }
 
