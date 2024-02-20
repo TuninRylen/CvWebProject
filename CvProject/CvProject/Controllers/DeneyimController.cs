@@ -31,5 +31,32 @@ namespace CvProject.Controllers
             repo.Add(p);
             return RedirectToAction("Index");
         }
+
+        public ActionResult DeneyimSil(int id)
+        {
+            TblDeneyimlerim T = repo.Find(x=>x.ID == id);
+            repo.Delete(T);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult DeneyimGetir(int id) 
+        {
+            TblDeneyimlerim T = repo.Find(x => x.ID == id);
+            return View(T);
+        }
+
+        [HttpPost]
+        public ActionResult DeneyimGetir(TblDeneyimlerim p) 
+        {
+            TblDeneyimlerim T = repo.Find(x => x.ID == p.ID);
+            T.Aciklama = p.Aciklama;
+            T.Tarih = p.Tarih;
+            T.Baslik = p.Baslik;
+            T.AltBaslik = p.AltBaslik;  
+            repo.Update(T);
+            return RedirectToAction("Index");
+
+        }
     }
 }

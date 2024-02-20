@@ -67,6 +67,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="TblYeteneklerim">
     <Key>
@@ -74,6 +75,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Yetenek" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Oran" Type="Byte" />
   </EntityType>
   <EntityContainer Name="DbCvEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" />

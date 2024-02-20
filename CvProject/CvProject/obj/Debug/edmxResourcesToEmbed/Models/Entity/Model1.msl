@@ -71,6 +71,7 @@
     <EntitySetMapping Name="TblSertifikalarım">
       <EntityTypeMapping TypeName="DbCvModel.TblSertifikalarım">
         <MappingFragment StoreEntitySet="TblSertifikalarım">
+          <ScalarProperty Name="Link" ColumnName="Link" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
         </MappingFragment>
@@ -79,6 +80,7 @@
     <EntitySetMapping Name="TblYeteneklerim">
       <EntityTypeMapping TypeName="DbCvModel.TblYeteneklerim">
         <MappingFragment StoreEntitySet="TblYeteneklerim">
+          <ScalarProperty Name="Oran" ColumnName="Oran" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
         </MappingFragment>
