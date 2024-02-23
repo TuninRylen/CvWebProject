@@ -1,0 +1,19 @@
+﻿@model CvProject.Models.Entity.TblYeteneklerim
+
+@{
+    ViewBag.Title = "YetenekDüzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>YetenekDüzenle</h2>
+
+<form class="form-group" method="post">
+    @Html.Label("Yetenek")
+    @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control" })
+
+    @Html.Label("Yetenek Başarı Oranı")
+    @Html.TextBoxFor(x => x.Oran, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Güncelle</button>
+</form>

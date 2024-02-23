@@ -2329,12 +2329,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Views\Home\Test.cshtml" />
-    <Content Include="Views\Home\Test2.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\Deneyim.cshtml" />
     <Content Include="Views\Default\Egitimlerim.cshtml" />
@@ -2342,11 +2337,12 @@
     <Content Include="Views\Default\Hobilerim.cshtml" />
     <Content Include="Views\Default\Sertifikalarim.cshtml" />
     <Content Include="Views\Default\iletisim.cshtml" />
-    <Content Include="Views\Hakkimda\Index.cshtml" />
     <Content Include="Views\Deneyim\Index.cshtml" />
     <Content Include="Views\Deneyim\DeneyimEkle.cshtml" />
     <Content Include="Views\Deneyim\DeneyimGetir.cshtml" />
     <Content Include="Views\Yetenek\Index.cshtml" />
+    <Content Include="Views\Yetenek\YeniYetenek.cshtml" />
+    <Content Include="Views\Yetenek\YetenekDüzenle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
