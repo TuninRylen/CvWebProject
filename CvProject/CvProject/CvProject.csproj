@@ -2356,6 +2356,7 @@
     <Content Include="Views\Iletisim\Index.cshtml" />
     <Content Include="Views\Hobilerim\Index.cshtml" />
     <Content Include="Views\Hobilerim\HobiEkle.cshtml" />
+    <Content Include="Views\Hobilerim\HobiGuncelle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
