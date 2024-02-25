@@ -133,6 +133,7 @@
     <Compile Include="Controllers\EgitimController.cs" />
     <Compile Include="Controllers\HakkimdaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SertifikaController.cs" />
     <Compile Include="Controllers\YetenekController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2315,7 +2316,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="startbootstrap-resume-gh-pages\assets\img\favicon.ico" />
-    <Content Include="startbootstrap-resume-gh-pages\assets\img\profile.jpg" />
+    <Content Include="startbootstrap-resume-gh-pages\assets\img\Profile.jpg" />
     <Content Include="startbootstrap-resume-gh-pages\css\styles.css" />
     <Content Include="startbootstrap-resume-gh-pages\index.html" />
     <Content Include="startbootstrap-resume-gh-pages\js\scripts.js" />
@@ -2347,6 +2348,9 @@
     <Content Include="Views\Egitim\Index.cshtml" />
     <Content Include="Views\Egitim\EgitimEkle.cshtml" />
     <Content Include="Views\Egitim\EgitimDuzenle.cshtml" />
+    <Content Include="Views\Sertifika\Index.cshtml" />
+    <Content Include="Views\Sertifika\SertifikaEkle.cshtml" />
+    <Content Include="Views\Sertifika\SertifikaDuzenle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

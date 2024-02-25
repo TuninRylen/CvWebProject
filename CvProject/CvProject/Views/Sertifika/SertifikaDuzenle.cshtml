@@ -1,0 +1,21 @@
+﻿@model CvProject.Models.Entity.TblSertifikalarım
+
+@{
+    ViewBag.Title = "SertifikaDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Eğitim Düzenleme Sayfasi</h4>
+<br />
+
+<form class="form-group" method="post">
+
+    @Html.Label("Baslik")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
