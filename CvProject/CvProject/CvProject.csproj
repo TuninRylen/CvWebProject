@@ -128,13 +128,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\DeneyimController.cs" />
     <Compile Include="Controllers\EgitimController.cs" />
     <Compile Include="Controllers\HakkimdaController.cs" />
+    <Compile Include="Controllers\HakkımdaController.cs" />
     <Compile Include="Controllers\HobilerimController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IletisimController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SertifikaController.cs" />
     <Compile Include="Controllers\YetenekController.cs" />
     <Compile Include="Global.asax.cs">
@@ -174,6 +177,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TblSertifikalarım.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\TblSosyalmedya.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TblYeteneklerim.cs">
@@ -2357,6 +2363,13 @@
     <Content Include="Views\Hobilerim\Index.cshtml" />
     <Content Include="Views\Hobilerim\HobiEkle.cshtml" />
     <Content Include="Views\Hobilerim\HobiGuncelle.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\AdminEkle.cshtml" />
+    <Content Include="Views\Admin\AdminGuncelle.cshtml" />
+    <Content Include="Views\Hakkımda\Index.cshtml" />
+    <Content Include="Views\Hakkımda\HakkımdaGuncelle.cshtml" />
+    <Content Include="Views\Default\SosyalMedya.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

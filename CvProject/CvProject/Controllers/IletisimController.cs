@@ -18,5 +18,12 @@ namespace CvProject.Controllers
             var iletisim = repo.List();
             return View(iletisim);
         }
+
+        public ActionResult IletisimSil(int id)
+        {
+            var deliletisim = repo.Find(x=>x.ID == id);
+            repo.Delete(deliletisim);
+            return RedirectToAction("Index");
+        }
     }
 }

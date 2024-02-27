@@ -1,0 +1,66 @@
+﻿@using CvProject.Models.Entity
+@model List<TblHakkimda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Hakkımda</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Ad</th>
+                                        <th>Soyad</th>
+                                        <th>Adres</th>
+                                        <th>Telefon</th>
+                                        <th>Mail</th>
+                                        <th>Aciklama</th>
+                                        <th>Resim</th>
+                                        <th>Güncelle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td>@x.Ad</td>
+                                            <td>@x.Soyad</td>
+                                            <td>@x.Adres</td>
+                                            <th>@x.Telefon</th>
+                                            <th>@x.Mail</th>
+                                            <th>@x.Aciklama</th>
+                                            <th>@x.Resim</th>
+                                            <td><a href="/Hakkımda/HakkımdaGuncelle/@x.ID" class="btn btn-success">Güncelle</a></td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+

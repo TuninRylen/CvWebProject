@@ -12,7 +12,7 @@ namespace CvProject.Controllers
     public class DefaultController : Controller
     {
         DbCvEntities db = new DbCvEntities();
-        
+
         // GET: Default
         public ActionResult Index()
         {
@@ -24,6 +24,12 @@ namespace CvProject.Controllers
         {
             var deneyimler = db.TblDeneyimlerim.ToList();
             return PartialView(deneyimler);
+        }
+
+        public PartialViewResult SosyalMedya()
+        {
+            var sosyalmedya = db.TblSosyalmedya.ToList();
+            return PartialView(sosyalmedya);
         }
 
         public PartialViewResult Egitimlerim()
