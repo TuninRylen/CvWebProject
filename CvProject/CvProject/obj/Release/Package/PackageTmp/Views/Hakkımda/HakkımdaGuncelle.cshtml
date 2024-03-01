@@ -1,0 +1,36 @@
+﻿@model CvProject.Models.Entity.TblHakkimda
+
+@{
+    ViewBag.Title = "HakkımdaGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Eğitim Düzenleme Sayfasi</h4>
+<br />
+
+<form class="form-group" method="post">
+    @Html.Label("Baslik")
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+
+    @Html.Label("Alt Başlık 1")
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+
+    @Html.Label("Alt Başlık 2")
+    @Html.TextBoxFor(x => x.Adres, new { @class = "form-control" })
+
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })
+
+    @Html.Label("Genel Not Ortalaması")
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+
+    @Html.Label("Aciklama")
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control; rows = 5" })
+
+    @Html.Label("Resim Urlsi")
+    @Html.TextBoxFor(x => x.Resim, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+</form>

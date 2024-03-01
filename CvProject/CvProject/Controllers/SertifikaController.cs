@@ -52,6 +52,7 @@ namespace CvProject.Controllers
         {
             var sertifika = repo.Find(x => x.ID == T.ID);
             sertifika.Aciklama = T.Aciklama;
+            sertifika.Link = T.Link;
             repo.Update(sertifika);
             return RedirectToAction("Index");
         }

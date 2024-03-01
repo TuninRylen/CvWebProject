@@ -1,0 +1,63 @@
+﻿@using CvProject.Models.Entity
+@model List<TblHobilerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Yetenek Listem</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="wrapper">
+
+                                <a href="/Hobilerim/HobiEkle/" class="btn btn-info">Yeni Hobi Ekle</a>
+                                <br />
+                                <br />
+
+                                @foreach (var x in Model)
+                                {
+                                    <section class="content">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="card card-primary card-outline">
+                                                        <div class="card-body p-0">
+                                                            <div class="mailbox-read-message">
+                                                                <p>@x.Aciklama1</p>
+                                                                <p>
+                                                                    @x.Aciklama2
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <a href="/Hobilerim/HobiSil/@x.ID" class="btn btn-danger">Sil</a>
+                                                            <a href="/Hobilerim/HobiGuncelle/@x.ID" class="btn btn-success">Güncelle</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+

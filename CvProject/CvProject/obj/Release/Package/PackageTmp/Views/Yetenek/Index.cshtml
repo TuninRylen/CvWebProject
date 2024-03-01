@@ -1,0 +1,87 @@
+﻿@using CvProject.Models.Entity
+@model List<TblYeteneklerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{string renk = "";}
+
+<br />
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Yetenek Listem</h3>
+                        </div>
+                        <div class="card-body">
+
+                            <a href="/Yetenek/YeniYetenek/" class="btn btn-info">Yeni Yetenek Ekle</a>
+                            <br />
+                            <br />
+
+                        </div>
+
+                            
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <th>Task</th>
+                                        <th>Progress</th>
+                                        <th style="width: 40px">Label</th>
+                                        <th>Sil</th>
+                                        <th>Güncelle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td>@x.ID</td>
+                                            <td>@x.Yetenek</td>
+                                            <td>
+
+                                                @if (x.Oran > 40 && 0 > x.Oran)
+                                                {
+                                                    renk = "progress-bar progress-bar-danger";
+                                                }
+                                                else if (x.Oran >= 40 && 60 > x.Oran)
+                                                {
+                                                    renk = "progress-bar bg-warning";
+                                                }
+                                                else if (x.Oran >= 60 && 70 > x.Oran)
+                                                {
+                                                    renk = "progress-bar bg-primary";
+                                                }
+                                                else
+                                                {
+                                                    renk = "progress-bar bg-success";
+                                                }
+
+                                                <div class="progress progress-xs">
+                                                    <div class="@renk" style="width: @x.Oran%"></div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge @renk">@x.Oran%</span></td>
+                                            <td><a href="/Yetenek/YetenekSil/@x.ID" class="btn btn-danger">Sil</a></td>
+                                            <td><a href="/Yetenek/YetenekDüzenle/@x.ID" class="btn btn-success">Güncelle</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

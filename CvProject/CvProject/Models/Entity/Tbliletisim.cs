@@ -11,16 +11,13 @@ namespace CvProject.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Tbliletisim
     {
         public int ID { get; set; }
         public string AdSoyad { get; set; }
         public string Mail { get; set; }
         public string Konu { get; set; }
-
-        [MaxLength(10000)]
         public string Mesaj { get; set; }
         public Nullable<System.DateTime> Tarih { get; set; }
     }

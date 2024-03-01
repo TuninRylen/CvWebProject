@@ -1,0 +1,53 @@
+﻿@using CvProject.Models.Entity
+@model List<TblAdmin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Admin Listesi</h3>
+                        </div>
+                        <div class="card-body">
+
+                            <a href="/Admin/AdminEkle" class="btn btn-info">Yeni Admin Ekle</a>
+                            <br />
+                            <br />
+
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th style="width: 10px">#</th>
+                                    <th>Kullanicı Adı</th>
+                                    <th>Şifre</th>
+                                    <th>Sil</th>
+                                    <th>Düzenle</th>
+                                </tr>
+                                @foreach (var x in Model)
+                                {
+                                    <tr>
+                                        <td>@x.ID</td>
+                                        <td>@x.KullaniciAdi</td>
+                                        <td>@x.Sifre</td>
+                                        <td><a href="/Admin/AdminSil/@x.ID" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Admin/AdminGuncelle/@x.ID" class="btn btn-success">Düzenle</a></td>
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

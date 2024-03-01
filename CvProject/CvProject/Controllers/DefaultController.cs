@@ -9,11 +9,11 @@ using CvProject.Models.Entity;
 
 namespace CvProject.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         DbCvEntities db = new DbCvEntities();
 
-        // GET: Default
         public ActionResult Index()
         {
             var degerler = db.TblHakkimda.ToList();
